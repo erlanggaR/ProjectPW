@@ -1,3 +1,42 @@
+.header h1{
+        background-color: #b70f0a;
+        padding: 25px 50px;
+        color: #fec63d;
+        font-family: Brush Script MT;
+        font-size:36px;
+        margin: auto;
+        }
+    .header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #fec63d;
+    }
+
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin-left: 50px;
+    }
+
+    .header li a:hover {
+        background-color: #b70f0a;
+    }
+    
+        
+    .header div{
+        height: 50px;   
+        color: #fec63d;
+
+        }
 
 body{
 	padding:0;
