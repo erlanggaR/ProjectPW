@@ -1,4 +1,28 @@
-.header h1{
+
+body{
+	padding:0;
+	margin:0;
+    background:rgba(255, 255, 255, 0.88);
+	font-family: 'Open Sans', sans-serif !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin:0;	
+font-family: 'Kotta One', serif;
+}	
+p{
+	margin:0;
+}
+ul{
+	margin:0;
+	padding:0;
+}
+label{
+	margin:0;
+}
+/*-- main --*/
+	
+	.header h1{
         background-color: #b70f0a;
         padding: 25px 50px;
         color: #fec63d;
@@ -37,34 +61,19 @@
         color: #fec63d;
 
         }
+     .header h1 button{
+     	background-color: #fec63d;
+		border: 10px #fec63d;
+		border-radius: 3px;
+		color: #b70f0a;
+		padding: 5px 10px;
+		}
 
-body{
-	padding:0;
-	margin:0;
-    background:rgba(255, 255, 255, 0.88);
-	font-family: 'Open Sans', sans-serif !important;
-}
-
-h1,h2,h3,h4,h5,h6{
-	margin:0;	
-font-family: 'Kotta One', serif;
-}	
-p{
-	margin:0;
-}
-ul{
-	margin:0;
-	padding:0;
-}
-label{
-	margin:0;
-}
-/*-- main --*/
 .content{
 	padding:50px 0;
 }
 .content h1{
-    color: #fff;
+    color: #b70f0a;
     font-size: 38px;
     text-align: center;
     letter-spacing: 1px;
@@ -84,6 +93,13 @@ label{
     text-transform: capitalize;
     font-weight: 500;
 }
+
+.Movie{
+	margin-top: 70px;
+	margin-left:120px;
+	margin-right: 120px;
+	}
+
 /*-- movie ticket --*/
 .front{
     margin: 5px 4px 45px 38px;
