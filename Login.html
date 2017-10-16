@@ -1,150 +1,27 @@
 <!DOCTYPE html>
 <html>
-<style>
-
-    h1{
-        background-color: #b70f0a;
-        padding: 25px 50px;
-        color: #fec63d;
-        font-family: Brush Script MT;
-        font-size:36px;
-        margin: auto;
-        }
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #fec63d;
-    }
-
-    li {
-        float: left;
-    }
-
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        margin-left: 50px;
-    }
-
-    li a:hover {
-        background-color: #b70f0a;
-    }
-    
-    h2{
-        margin: auto;
-        }
-        
-    div{
-        height: 50px;   
-        color: #fec63d;
-
-        }
-        
-    .login1{
-    background-color: #FFCC00;
-    color: red;
-    font-weight: bold;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 300px;
-    border-radius: 8px;
-    Margin-left : 500px;
-
-
-    }
-    .register{
-        background-color: #FFCC00;
-        color: red;
-        font-weight: bold;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-        width: 300px;
-        border-radius: 8px;
-        Margin-left : 500px;
-    }
-
-    .dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        padding: 12px 16px;
-        z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-    
-    .home1{
-    margin-top: 70px;
-    margin-left: 120px;
-    }
-    .home2{
-        margin-top: 70px;
-
-        position: fixed;
-    
-    } 
-input[type=text] {
-    width: 300px;
-    padding: 10px 30px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border: 1px solid yellow;
-    Margin-left : 500px;
-    margin-top: 100px;
-}
-input[type=password]{
-    width: 300px;
-    padding: 10px 30px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border: 1px solid red;
-    Margin-left : 500px;
-}
-
-
-
-}
-</style>
-<h1>Cynema
-    </h1>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#news">News</a></li>   
-      <div class="dropdown">
-  <span>Mouse over me</span>
-  <div class="dropdown-content">
-    <p>Hello World!</p>
-  </div>
-</div>
-<li><a class="dropdown" href="#category">Category</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>   
-    </head>
+<link href="Media/styler.css" rel="stylesheet" type="text/css" media="all" />
+<head>
+<title>Welcome to Cynema!</title>
+</head>
 <body>
-<form>
-    <input type="text" placeholder="Email Address" name="uname" required><br>
+<h1>Cynema</h1>
+    <ul>
+		<li><a href="#home">Home</a></li>
+		<li><a href="#news">News</a></li>   
+			<div class="dropdown">
+				<span>Mouse over me</span>
+				<div class="dropdown-content">
+					<p>Hello World!</p>
+				</div>
+			</div>
+		<li><a class="dropdown" href="#category">Category</a></li>
+		<li><a href="#about">About</a></li>
+    </ul>   	
+	
+	<h2 class = "ptitlel">Welcome to Cynema!</h2>
+<form class="forml">
+    <input class="logini" type="text" placeholder="Email Address" name="uname" required><br>
     <input type="password" placeholder="Password" name="psw" required><br>
     <button class = "login1" type="submit">Login</button><br>
     <button class = "register" type="submit">Register</button><br>
