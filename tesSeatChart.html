@@ -2,12 +2,33 @@
 <html>
 <head>
 <title>Movie Ticket Booking</title>
-<link href="Media/style.css" rel="stylesheet" type="text/css" media="all" />
-<script src="jquery-1.11.0.min.js"></script>
-<script src="jquery.seat-charts.js"></script>
+
+<link href="css/styler.css" rel="stylesheet" type="text/css" media="all" />
+<script src="jquery/jquery-1.11.0.min.js"></script>
+<script src="jquery/jquery.seat-charts.js"></script>
 </head>
+
+<body>
+	
+<div class="header">
+	<h1>Cynema</h1>
+	<ul>
+		<li><a href="#home">Home</a></li>
+		<li><a href="#news">News</a></li>   
+			<div class="dropdown">
+				<span>Mouse over me</span>
+				<div class="dropdown-content">
+					<p>Hello World!</p>
+				</div>
+			</div>
+		<li><a class="dropdown" href="#category">Category</a></li>
+		<li><a href="#about">About</a></li>
+    </ul>   	
+</div>
+
+	<br><br><br><br><br><br>
 <div class="content">
-	<h1 class="ptitlet">Movie Ticket Booking</h1>
+		<h2 class = "ptitlel">Movie Ticket Booking</h2>
 	<div class="main">
 		<div class="demo">
 			<div id="seat-map">
@@ -115,5 +136,6 @@
 			</script>
 	</div>
 </div>
+<br><br><br>
 </body>
 </html>
