@@ -8,9 +8,10 @@
 <body>
 	<div class="header">
 	<h1>Cynema
-			<button class="tombolh" type="button">Register</button> 
-			<button class="tombolh1" type="button">Login</button> 
-		</h1>
+		<a class ="tombolh" href="logout.php"> Logout </a> <t>
+		<a class ="tombolh1" href="index.php"> Login </a>
+	</h1>
+
 		<ul>
 		  <li><a href="#home">Home</a></li>
 		  <li><a href="#news">News</a></li>	  
@@ -27,7 +28,6 @@
 	<br><br><br>
 	<img class="home1"src="Media\movies.jpg" alt="" width="40%" height=300px>
 	<img class="home2"src="Media\Cinemas.jpg" alt="" width="40%" height=300px>
-
 </body>
 
 </html>
