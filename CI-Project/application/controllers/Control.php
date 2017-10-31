@@ -14,5 +14,9 @@
 		public function home(){
 			$this->load->view('home');
 		}
+		public function movDet(){
+			$this->load->view('MovieDetail');
+		}
+		}
 	}
 ?>

@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Movie Detail</title>
-<link href="css/styler.css" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo base_url();?>css/Styler.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 
 <body>
@@ -26,8 +26,8 @@
 
 	<div class="Video">
       <video width="575" height="350" controls>
-	  <source src="Media/Kingsman2.mp4" type="video/mp4">
-	  <source src="Media/Kingsman2.ogg" type="video/ogg">
+	  <source src="<?php echo base_url();?>Media/Kingsman2.mp4" type="video/mp4">
+	  <source src="<?php echo base_url();?>Media/Kingsman2.ogg" type="video/ogg">
 	</div>
 
 	<div class="text2">
