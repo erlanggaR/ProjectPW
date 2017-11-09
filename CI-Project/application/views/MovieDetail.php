@@ -25,9 +25,7 @@
 	</div>
 
 	<div class="Video">
-      <video width="575" height="350" controls>
-	  <source src="<?php echo base_url();?>Media/Kingsman2.mp4" type="video/mp4">
-	  <source src="<?php echo base_url();?>Media/Kingsman2.ogg" type="video/ogg">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
 	</div>
 
 	<div class="text2">
