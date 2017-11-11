@@ -3,9 +3,9 @@
 <head>
 <title>Movie Ticket Booking</title>
 
-<link href="css/styler.css" rel="stylesheet" type="text/css" media="all" />
-<script src="jquery/jquery-1.11.0.min.js"></script>
-<script src="jquery/jquery.seat-charts.js"></script>
+<link href="<?php echo base_url();?>css/Styler.css" rel="stylesheet" type="text/css" media="all" />
+<script src="<?php echo base_url();?>jquery/jquery-1.11.0.min.js"></script>
+<script src="<?php echo base_url();?>jquery/jquery.seat-charts.js"></script>
 </head>
 
 <body>
@@ -13,14 +13,14 @@
 <div class="header">
 	<h1>Cynema</h1>
 	<ul>
-		<li><a href="home.php">Home</a></li>
+		<li><a href="<?php echo site_url('Control/home')?>">Home</a></li>
 		<li><a href="#news">News</a></li>   
 		 <div class="dropdown">
 	  		<li><a class="dropdown" href="#category">Category</a></li>
 	  		<div class="dropdown-content">
 			<p>Content</p>
-			<p><a href="SeatChart.php">Grab Ticket!</a></p>
-		    <p><a href="MovieList.html">Movie List</a></p>
+			<p><a href="<?php echo site_url('Control/seat')?>">Grab Ticket!</a></p>
+		    <p><a href="<?php echo site_url('Control/movList')?>">Movie List</a></p>
 	  	  </div>
 		<li><a href="#about">About</a></li>
     </ul>   	
@@ -43,7 +43,7 @@
 					<li>Seats :</li>
 				</ul>
 				<ul class="book-right">
-					<li>: Kamu yang Disana</li>
+					<li>: Kingsman</li>
 					<li>: October 3, 23:30</li>
 					<li>: <span id="counter">0</span></li>
 					<li>: <b><i>$</i><span id="total">0</span></b></li>

@@ -27,5 +27,8 @@
 			$this->load->view('MovieList');
 		}
 		
+		public function seat(){
+			$this->load->view('SeatChart');
+		}
 	}
 ?>
