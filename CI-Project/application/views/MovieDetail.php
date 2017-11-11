@@ -9,7 +9,7 @@
 	<div class="header">
 <h1>Cynema</h1>
     <ul>
-		<li><a href="home.php">Home</a></li>
+		<li><a href="<?php echo site_url('Control/home')?>">Home</a></li>
 		<li><a href="#news">News</a></li>   
 				 <div class="dropdown">
 	  		<li><a class="dropdown" href="#category">Category</a></li>

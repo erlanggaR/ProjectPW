@@ -8,9 +8,15 @@
 			$this->load->helper('url');	
 		}
 		public function index(){
-			$this->load->view('index');
+			$this->load->view('index.php');
 		}
 		
+		public function logout(){
+			session_start();
+			session_destroy(); 
+			$this->load->view('index.php');
+		}
+
 		public function home(){
 			$this->load->view('home.php');
 		}

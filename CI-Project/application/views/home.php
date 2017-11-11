@@ -8,8 +8,8 @@
 <body>
 	<div class="header">
 	<h1>Cynema
-		<a class ="tombolh" href="logout.php"> Logout </a> <t>
-		<a class ="tombolh1" href="index.php"> Login </a>
+		<a class ="tombolh" href="<?php echo site_url('Control/logout')?>"> Logout </a> <t>
+		<a class ="tombolh1" href="<?php echo site_url('Control/index')?>"> Login </a>
 	</h1>
 
 		<ul>
