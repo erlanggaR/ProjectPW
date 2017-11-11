@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Movie Detail</title>
+<title>Movie List</title>
 <link href="<?php echo base_url();?>css/Styler.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 
 <body>
-	<div class="header">
-<h1>Cynema</h1>
-    <ul>
+<div class="header">
+	<h1>Cynema </h1>
+        <ul>
 		<li><a href="<?php echo site_url('Control/home')?>">Home</a></li>
 		<li><a href="#news">News</a></li>   
 				 <div class="dropdown">
@@ -19,17 +19,18 @@
 		    <p><a href="<?php echo site_url('Control/movList')?>">Movie List</a></p>
 	  	  </div>
 		<li><a href="#about">About</a></li>
-    </ul>   	
-
-    	<h2 class = "ptitlel">Kingsman 2</h2>
+    </ul>  
 	</div>
 
-	<div class="Video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
-	</div>
+<div class="Movie" align="center">
+      <img src="<?php echo base_url();?>Media\m2.jpg" alt="" width="20%" height=300px> </img>
 
-	<div class="text2">
-	<p> When their headquarters are destroyed and the world is held hostage, the Kingsman's journey leads them to the discovery of an allied spy organization in the US. These two elite secret organizations must band together to defeat a common enemy.</p>
-	</div>
-	
+      <a href="<?php echo site_url('Control/movDet')?>">
+      	<img src="<?php echo base_url();?>Media\m3.jpg" alt="" width="20%" height=300px> </img> 
+      </a>
+      
+      <br><br> <br> <br>
+      <img src="<?php echo base_url();?>Media\m1.jpg" alt="" width="20%" height=300px> </img>
+</div>
+
 </body>

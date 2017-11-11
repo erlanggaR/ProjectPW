@@ -23,6 +23,9 @@
 		public function movDet(){
 			$this->load->view('MovieDetail');
 		}
+		public function movList(){
+			$this->load->view('MovieList');
+		}
 		
 	}
 ?>

@@ -21,7 +21,7 @@
 	  		<div class="dropdown-content">
 			<p>Content</p>
 			<p><a href="SeatChart.php">Grab Ticket!</a></p>
-		    <p><a href="MovieList.html">Movie List</a></p>
+		    <p><a href="<?php echo site_url('Control/movList')?>">Movie List</a></p>
 	  	  </div>
 
 		  <li><a href="#about">About</a></li>
