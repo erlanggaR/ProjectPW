@@ -12,11 +12,11 @@
 		}
 		
 		public function home(){
-			$this->load->view('home');
+			$this->load->view('home.php');
 		}
 		public function movDet(){
 			$this->load->view('MovieDetail');
 		}
-		}
+		
 	}
 ?>

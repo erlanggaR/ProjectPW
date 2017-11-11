@@ -12,7 +12,7 @@
 			$password=$_POST['psw'];
 		
 			$_SESSION['login_user']=$username; 
-			header("location: home1.php"); // Redirect KE Page Welcome
+			header("location: home.php"); // Redirect KE Page Welcome
 		}
 
 		else{
