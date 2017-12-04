@@ -9,16 +9,10 @@
 	<div class="header">
 <h1>Cynema</h1>
     <ul>
-		<li><a href="<?php echo site_url('Control/home')?>">Home</a></li>
-		<li><a href="#news">News</a></li>   
-				 <div class="dropdown">
-	  		<li><a class="dropdown" href="#category">Category</a></li>
-	  		<div class="dropdown-content">
-			<p>Content</p>
-			<p><a href="<?php echo site_url('Control/seat')?>">Grab Ticket!</a></p>
-		    <p><a href="<?php echo site_url('Control/movList')?>">Movie List</a></p>
-	  	  </div>
-		<li><a href="#about">About</a></li>
+		  <li><a href="<?php echo site_url('Control/home')?>">Home</a></li>
+		  <li><a href="<?php echo site_url('Control/seat')?>">Grab Ticket!</a></li>	 
+	  	  <li><a href="<?php echo site_url('Control/movList')?>">Movie List</a></li>
+		  <li><a href="#about">About</a></li>
     </ul>   	
 
     	<h2 class = "ptitlel">Kingsman 2</h2>
