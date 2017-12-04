@@ -17,7 +17,10 @@
 	<input id="password" name="password" placeholder="********" type="password" required>
 
 	<button class="register" type="submit">Sign In</button>
-    <button class = "register" type="submit">Register</button><br>
+    <center>
+    <p><a href="<?php echo base_url('/index.php/Daftar_user') ?>"><u>Register</u><a></p>
+	</center>
+    <br>
 </form>
 
 </body>
