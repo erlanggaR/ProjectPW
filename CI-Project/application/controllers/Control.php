@@ -15,14 +15,20 @@
 			$this->load->view('home.php');
 		}
 		public function movDet(){
-			$this->load->view('MovieDetail');
+			$id_film = $this->uri->segment(3);
+			$this->load->model('Film_model');
+			$data["list_film"] = $this->Film_model->pilih($id_film);
+			$this->load->view('MovieDetail',$data);
 		}
 		public function movList(){
-			$this->load->view('MovieList');
+			$this->load->model('Film_model');
+			$data["list_film"] = $this->Film_model->tampil();
+			$this->load->view('MovieList', $data);
 		}
 		
 		public function seat(){
 			$this->load->view('SeatChart');
 		}
+
 	}
 ?>

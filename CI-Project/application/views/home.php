@@ -13,8 +13,7 @@
 
 		<ul>
 		  <li><a href="<?php echo site_url('Control/home')?>">Home</a></li>
-		  <li><a href="<?php echo site_url('Control/seat')?>">Grab Ticket!</a></li>	 
-	  	  <li><a href="<?php echo site_url('Control/movList')?>">Movie List</a></li>
+		  <li><a href="<?php echo site_url('Control/movList')?>">Movie List</a></li>
 		  <li><a href="#about">About</a></li>
 		</ul>	
 	</div>
