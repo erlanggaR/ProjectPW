@@ -38,10 +38,10 @@
 					<li>Seats :</li>
 				</ul>
 				<ul class="book-right">
-					<li>: Kingsman</li>
-					<li>: October 3, 23:30</li>
+					<li>: <?php echo $list_film->judul;?></li>
+					<li>: <?php echo $list_film->tgl_main;?>, <?php echo $list_film->jam;?></li>
 					<li>: <span id="counter">0</span></li>
-					<li>: <b><i>$</i><span id="total">0</span></b></li>
+					<li>: <b><i>Rp. </i><span id="total">0</span></b></li>
 				</ul>
 				<div class="clear"></div>
 				<ul id="selected-seats" class="scrollbar scrollbar1"></ul>
@@ -54,7 +54,8 @@
 	    </div>
 
 			<script type="text/javascript">
-				var price = 20; //price
+				var price = 40000; //price
+				
 				$(document).ready(function() {
 					var $cart = $('#selected-seats'), //Sitting Area
 					$counter = $('#counter'), //Votes
@@ -89,16 +90,18 @@
 						},
 						click: function () { //Click event
 							if (this.status() == 'available') { //optional seat
-								$('<li>Row'+(this.settings.row+1)+' Seat'+this.settings.label+'</li>')
+								$('<li>Row '+(this.settings.row+1)+' Seat '+this.settings.label+'</li>')
 									.attr('id', 'cart-item-'+this.settings.id)
 									.data('seatId', this.settings.id)
 									.appendTo($cart);
+
 
 								$counter.text(sc.find('selected').length+1);
 								$total.text(recalculateTotal(sc)+price);
 											
 								return 'selected';
-							} else if (this.status() == 'selected') { //Checked
+							} 
+							else if (this.status() == 'selected') { //Checked
 									//Update Number
 									$counter.text(sc.find('selected').length-1);
 									//update totalnum
@@ -108,9 +111,11 @@
 									$('#cart-item-'+this.settings.id).remove();
 									//optional
 									return 'available';
-							} else if (this.status() == 'unavailable') { //sold
+							} 
+							else if (this.status() == 'unavailable') { //sold
 								return 'unavailable';
-							} else {
+							} 
+							else {
 								return this.style();
 							}
 						}

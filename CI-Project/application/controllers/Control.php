@@ -27,7 +27,10 @@
 		}
 		
 		public function seat(){
-			$this->load->view('SeatChart');
+			$id_film = $this->uri->segment(3);
+			$this->load->model('Film_model');
+			$data["list_film"] = $this->Film_model->pilih($id_film);
+			$this->load->view('SeatChart',$data);
 		}
 
 	}

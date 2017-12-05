@@ -26,8 +26,10 @@
 	<p> <?php echo $list_film->deskripsi;?></p>
 	</div>
 	
-	<form class="forml" action=<?php echo site_url('Control/seat')?>>
+	<a href="<?php echo base_url()."index.php/Control/seat/".$list_film->id_film;?>">
+	<form class="forml">
 		<button class="register">Grab Your Ticket!</button>
 	</form>
+	</a>
 	
 </body>
