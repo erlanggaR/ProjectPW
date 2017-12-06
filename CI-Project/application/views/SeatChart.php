@@ -46,8 +46,15 @@
 				<div class="clear"></div>
 				<ul id="selected-seats" class="scrollbar scrollbar1"></ul>
 			
-						
-				<button class="checkout-button">Book Now</button>	
+
+				<form action="<?php echo site_url('Control/book')?>" method="POST">
+					<input type="hidden" name="id_film" value="<?= $this->uri->segment(3);?>" id="">
+					<input type="hidden" name="baris" value="" id="baris">
+					<input type="hidden" name="kolom" value="" id="kolom">
+					<button class="checkout-button" type="submit" >Book Now</button>	
+				</form>
+
+				
 				<div id="legend"></div>
 			</div>
 			<div style="clear:both"></div>
@@ -63,15 +70,15 @@
 					
 					var sc = $('#seat-map').seatCharts({
 						map: [  //Seating chart
-							'aaaaaaaaaa',
-							'aaaaaaaaaa',
-							'__________',
-							'aaaaaaaaaa',
-							'aaaaaaaaaa',
-							'aaaaaaaaaa',
-							'aaaaaaaaaa',
-							'aaaaaaaaaa',
-							'aaaaaaaaaa',
+							'aaaaa_aaaa',
+							'aaaaa_aaaa',
+							'aaaaa_aaaa',
+							'aaaaa_aaaa',
+							'aaaaa_aaaa',
+							'aaaaa_aaaa',
+							'aaaaa_aaaa',
+							'aaaaa_aaaa',
+							'aaaaa_aaaa',
 							'aa__aa__aa'
 						],
 						naming : {
@@ -94,13 +101,18 @@
 									.attr('id', 'cart-item-'+this.settings.id)
 									.data('seatId', this.settings.id)
 									.appendTo($cart);
-
+						
+							var baris = this.settings.row;
+							var kolom = this.settings.label;
+							$('#baris').val(baris);
+							$('#kolom').val(kolom);
 
 								$counter.text(sc.find('selected').length+1);
 								$total.text(recalculateTotal(sc)+price);
 											
 								return 'selected';
 							} 
+
 							else if (this.status() == 'selected') { //Checked
 									//Update Number
 									$counter.text(sc.find('selected').length-1);

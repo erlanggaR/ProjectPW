@@ -33,5 +33,17 @@
 			$this->load->view('SeatChart',$data);
 		}
 
+		public function book(){
+			$this->load->model('Film_model');
+
+			$baris=$this->input->post('baris');
+			$kolom=$this->input->post('kolom');
+			$id_film=$this->input->post('id_film');
+			$data["booking"] = $this->Film_model->input($id_film,$baris,$kolom);
+			var_dump($data['booking']); die();
+			
+		}
+
+
 	}
 ?>
