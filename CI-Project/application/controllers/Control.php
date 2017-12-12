@@ -7,12 +7,9 @@
 			parent::__construct();
 			$this->load->helper('url');	
 		}
-		public function index(){
-			$this->load->view('index.php');
-		}
 		
 		public function home(){
-			$this->load->view('home.php');
+			$this->load->view('home');
 		}
 		public function movDet(){
 			$id_film = $this->uri->segment(3);
@@ -43,7 +40,13 @@
 			$id_film=$this->input->post('id_film');
 			
 			$data["booking"] = $this->Film_model->input($id_booking, $id, $id_film, $baris, $kolom);
-			$this->load->view('SeatChart',$data);
+
+		$dataa = array();
+		
+		$this->dataa['error'] =  "You Have Been Purchased a Ticket!";
+        $this->load->view('home', $this->dataa);    
+        return;
+   
 			//var_dump($data['booking']); die();
 			
 		}

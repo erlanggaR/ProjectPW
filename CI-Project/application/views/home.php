@@ -17,7 +17,10 @@
 		  <li><a href="#about">About</a></li>
 		</ul>	
 	</div>
+	<br><br><br><br><br><br><br><br>
+	  <center><?php echo $error;  ?></center>
 	<br><br><br>
+  
 	<img class="home1" src="<?php echo base_url();?>Media\movies.jpg" alt="" width="40%" height=300px>
 	<img class="home2" src="<?php echo base_url();?>Media\Cinemas.jpg" alt="" width="40%" height=300px>
 </body>

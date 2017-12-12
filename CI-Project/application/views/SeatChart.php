@@ -49,7 +49,7 @@
 
 				<form action="<?php echo site_url('Control/book')?>" method="POST">
 					<input type="hidden" name="id_booking" value="">
-					<input type="hidden" name="id_film" value="<?= $this->uri->segment(3);?>" id="">
+					<input type="hidden" name="id_film" value="<?= $this->uri->segment(3);?>" id="id_film">
 					<input type="hidden" name="id" value="<?= $this->session->userdata('id')?>">
 					<input type="hidden" name="baris" value="" id="baris">
 					<input type="hidden" name="kolom" value="" id="kolom">
