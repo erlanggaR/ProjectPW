@@ -22,10 +22,10 @@
 		
 		<form class="form1" method="POST" action="<?php echo base_url('index.php/Daftar_User/register_user'); ?>">
 			<br><br><br><br><br><br><br><br><br><br>
-			<input type="text" placeholder="id Anda" name="id" required>
+			<input type="hidden" name="id" value="">
 			<input type="text" placeholder="Nama Lengkap" name="nama" required>
 			<input type="text" placeholder="Email Anda" name="email" required>
-			<input type="text" placeholder="Credit Card Anda" name="credit_card" required>
+			<input type="text" placeholder="Nomor Kartu Kredit" name="credit_card" required>
 			<input type="password" placeholder="Password" name="password" required>
 			<br>
 			<br>		

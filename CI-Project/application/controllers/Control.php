@@ -35,12 +35,16 @@
 
 		public function book(){
 			$this->load->model('Film_model');
-
+			
+			$id_booking=$this->input->post('id_booking');
+			$id=$this->input->post('id');
 			$baris=$this->input->post('baris');
 			$kolom=$this->input->post('kolom');
 			$id_film=$this->input->post('id_film');
-			$data["booking"] = $this->Film_model->input($id_film,$baris,$kolom);
-			var_dump($data['booking']); die();
+			
+			$data["booking"] = $this->Film_model->input($id_booking, $id, $id_film, $baris, $kolom);
+			$this->load->view('SeatChart',$data);
+			//var_dump($data['booking']); die();
 			
 		}
 

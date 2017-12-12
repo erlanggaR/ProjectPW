@@ -19,9 +19,10 @@
 
 			public function register_user()
 				{
+					
 					$user=array(
 						'id'=>$this->input->post('id'),
-						'password'=>$this->input->post('password'),
+						'password'=>md5($this->input->post('password')),
 						'nama'=>$this->input->post('nama'),
 						'email'=>$this->input->post('email'),
 						'credit_card'=>$this->input->post('credit_card')

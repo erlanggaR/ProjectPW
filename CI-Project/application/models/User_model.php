@@ -18,9 +18,9 @@
 
 			public function login_user($email,$password)
 				{
-					$password_query = $password;
+					$password_query = md5($password);
             		$result = $this->db->get_where('customer',['email' =>$email, 'password'=>$password_query]);
-            		return $result->result_array();
+            		return $result->row();
 				}
 		
 		}

@@ -24,12 +24,14 @@
 			return $query;
 		}
 
-		public function input($id_film, $baris, $kolom)
+		public function input($id_booking, $id, $id_film, $baris, $kolom)
 		{
 			$data = array(
+				'id_booking' => $id_booking,
+				'id' => $id,
 	        	'id_film' => $id_film,
 	        	'baris' => $baris,
-	        	'kolom' => $kolom
+	        	'kolom' => $kolom,  	
 		);
 
 		return $this->db->insert('booking', $data);

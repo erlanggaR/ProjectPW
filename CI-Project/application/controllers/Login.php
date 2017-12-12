@@ -23,18 +23,21 @@ class Login extends CI_Controller {
   $password = $this->input->post('password');
 
   $this->load->model('User_model');
-    $result['data'] = $this->User_model->login_user($email, $password);
-        
-        if ($result['data'] == NULL){
+    $result= $this->User_model->login_user($email, $password);
+       // var_dump($result);die();
+
+        if ($result == NULL){
             redirect('/Login', 'refresh');
         }
 
         else{
             $data = array( 
-                'email'     => $email, 
+                'email'     => $result->email,
+                'id'        => $result->id, 
                 'logged_in' => TRUE
             );         
         }
+        // var_dump($data); die();
 
         $this->session->set_userdata($data);
         $this->load->view("home.php");
