@@ -45,11 +45,11 @@
 				</ul>
 				<div class="clear"></div>
 				<ul id="selected-seats" class="scrollbar scrollbar1"></ul>
-			
+		
 
 				<form action="<?php echo site_url('Control/book')?>" method="POST">
 					<input type="hidden" name="id_booking" value="">
-					<input type="hidden" name="id_film" value="<?= $this->uri->segment(3);?>" id="id_film">
+					<input type="hidden" name="id_film" value="<?= $this->uri->segment(3);?>" id="">
 					<input type="hidden" name="id" value="<?= $this->session->userdata('id')?>">
 					<input type="hidden" name="baris" value="" id="baris">
 					<input type="hidden" name="kolom" value="" id="kolom">
@@ -61,12 +61,21 @@
 			</div>
 			<div style="clear:both"></div>
 	    </div>
+		<?php
+
+		
+		$items = array();
+        foreach ($data_book->result() as $row) {
+			$items[] = array($row->baris ."_". $row->kolom);
+        }
+		?>
 
 			<script type="text/javascript">
 				var price = 40000; //price
 				
 				$(document).ready(function() {
 					var $cart = $('#selected-seats'), //Sitting Area
+					$bk = $('#baris'+'_'+'#kolom'),
 					$counter = $('#counter'), //Votes
 					$total = $('#total'); //Total money
 					
@@ -81,7 +90,7 @@
 							'aaaaa_aaaa',
 							'aaaaa_aaaa',
 							'aaaaa_aaaa',
-							'aa__aa__aa'
+							'aaaaaa__aa'
 						],
 						naming : {
 							top : false,
@@ -104,7 +113,7 @@
 									.data('seatId', this.settings.id)
 									.appendTo($cart);
 						
-							var baris = this.settings.row;
+							var baris = this.settings.row+1;
 							var kolom = this.settings.label;
 							$('#baris').val(baris);
 							$('#kolom').val(kolom);
@@ -136,8 +145,18 @@
 					});
 
 					//sold seat
-					sc.get(['1_2', '4_4','4_5','6_6','6_7','8_5','8_6','8_7','8_8', '10_1', '10_2']).status('unavailable');
-						
+					//sc.get(['0_4']).status('unavailable');
+					
+					var jsArray = <?php echo json_encode($items); ?>;
+					var arrayLength = jsArray.length;
+					for (var i = 0; i < arrayLength; i++) {
+						//document.write(jsArray[i]);
+						sc.get([jsArray[i]]).status('unavailable');
+					}
+					
+					
+					
+					
 				});
 				//sum total money
 				function recalculateTotal(sc) {
