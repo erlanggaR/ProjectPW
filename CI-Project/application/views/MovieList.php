@@ -19,6 +19,8 @@
 
 <div class="Movie" align="center">
 
+ <h2 style="font-size:66px; color:#b70f0a; border-style: dotted; border-color: #fec63d;">NOW SHOWING</h2>
+
    <?php 
         foreach ($list_film->result() as $row) {
           ?>
