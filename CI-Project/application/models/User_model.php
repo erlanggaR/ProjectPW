@@ -11,17 +11,33 @@
 			$this->load->library('session');
  
 		}
-			public function register_user($customer)
-				{
-					$this->db->insert('customer', $customer);
-				}
+			
+		public function register_user()
+		{
 
-			public function login_user($email,$password)
-				{
-					$password_query = md5($password);
-            		$result = $this->db->get_where('customer',['email' =>$email, 'password'=>$password_query]);
-            		return $result->row();
-				}
-		
+			$data = array(
+				'id' => $this->input->post('id'),
+		        'nama' => $this->input->post('nama'),
+	    	    'email' => $this->input->post('email'),
+	    	    'credit_card' => $this->input->post('credit_card'),
+	        	'password' => md5( $this->input->post('password') )
+    		);
+	
+				return $this->db->insert('customer', $data);
 		}
+
+		public function login_user($email,$password)
+		{
+				$query  = "SELECT * 
+				FROM customer
+				WHERE email = ". $this->db->escape($email) .
+				" AND  password = md5(" . $this->db->escape($password) . ")" ;
+				
+				if( $result = $this->db->query($query) ) {
+				return $result;	
+				}
+				else return false;
+		}
+	
+	}
 ?>

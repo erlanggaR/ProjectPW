@@ -12,30 +12,38 @@
 
 
 	<div class="container">
-		<?php
-         $error_msg=$this->session->flashdata('error_msg');
-         if($error_msg)
-	         {
-	           echo $error_msg;
-	         }
-      ?>
+		<?php $this->load->library('form_validation');?>
 		
-		<form class="form1" method="POST" action="<?php echo base_url('index.php/Daftar_User/register_user'); ?>">
+		<form class="form1">
 			<br><br><br><br><br><br><br><br><br><br>
-			<input type="hidden" name="id" value="">
-			<input type="text" placeholder="Nama Lengkap" name="nama" required>
-			<input type="text" placeholder="Email Anda" name="email" required>
-			<input type="text" placeholder="Nomor Kartu Kredit" name="credit_card" required>
-			<input type="password" placeholder="Password" name="password" required>
-			<br>
-			<br>		
-			<button class="register" type="submit" name="register">Daftar</button>
 		</form>
+
+		<?php echo form_open('Daftar_User/register_user'); ?>
+
 			
+			<input type="hidden" name="id" value="">
+
+			<input type="Text" name="nama" value="<?= set_value('nama') ?>" placeholder="Nama Lengkap">
+			<input type="Text" name="email" value="<?= set_value('email')?>" placeholder="Email Anda">
+			<input type="Text" name="credit_card" value="<?= set_value('credit_card')?>" placeholder="Nomor Kartu Kredit">
+			<input type="Password" name="password" value="<?= set_value('password') ?>" placeholder="Password"> <br>	
+			<input type="Password" name="passconf" placeholder="Konfirmasi Password"><br>	
+			
+
+			<button class="register" type="submit" name="register">Daftar</button>
+			
+			<center>
+			<?php echo form_error('nama')?>
+			<?php echo form_error('email')?>
+			<?php echo form_error('credit_card')?>
+			<?php echo form_error('password')?>
+			<?php echo form_error('passconf')?>
+			</center>
+		</form>
 			<!--for centered text-->
 		<center>
-			<b>Sudah punya Akun?</b><br>
-			</b><a href="<?php echo base_url('index.php/Login'); ?>"><u>Masuk disini</u></a>
+			<b>Have an Accout?</b><br>
+			<a href="<?php echo base_url('index.php/Login'); ?>"><button class="register">Login Here!</button> </a>
 		</center>
 	</div>
 </body>

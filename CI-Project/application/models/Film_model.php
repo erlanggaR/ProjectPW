@@ -23,10 +23,9 @@
 			$query = $this->db->get_where('list_film', array('id_film' => $id_film))->row();
 			return $query;
 		}
-		
-		public function pilih_booking($id_film)
-		{
-			$this->db->where('id_film', $id_film);
+
+		public function pilih_booking($id_film){
+			$this->db->where('id_film' ,$id_film);
 			return $this->db->get('booking');
 		}
 
